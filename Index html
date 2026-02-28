@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV - Professional Profile</title>
+    <style>
+        /* --- CSS Variables for Easy Color Changes --- */
+        :root {
+            --primary-color: #2563eb; /* Blue */
+            --secondary-color: #1e293b; /* Dark Grey */
+            --text-color: #334155;
+            --bg-color: #f8fafc;
+            --white: #ffffff;
+            --accent: #e2e8f0;
+        }
+
+        /* --- General Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- Header / Hero Section --- */
+        header {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Main Container --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        /* --- Experience & Education Items --- */
+        .item {
+            margin-bottom: 1.5rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .item-date {
+            font-style: italic;
+            color: #64748b;
+        }
+
+        /* --- Skills Section --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-color);
+            border: 1px solid var(--accent);
+            padding: 0.5rem;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /* --- Projects --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            border: 1px solid var(--accent);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Contact --- */
+        .contact-info {
+            text-align: center;
+        }
+        
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            color: #94a3b8;
+            margin-top: 2rem;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin: 5px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>John Doe</h1>
+        <p>Software Engineer | Web Developer | Designer</p>
+        <a href="mailto:john.doe@example.com" class="btn">Contact Me</a>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate developer with 5 years of experience in building web applications. 
+                I specialize in JavaScript, React, and Python. I love solving complex problems and 
+                creating user-friendly interfaces. I am currently looking for a new role where I 
+                can contribute to a dynamic team and continue learning.
+            </p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Senior Web Developer</span>
+                    <span class="item-date">2021 - Present</span>
+                </div>
+                <p><strong>Tech Solutions Inc.</strong></p>
+                <ul>
+                    <li>• Led a team of 4 developers to rebuild the company website.</li>
+                    <li>• Improved site performance by 40% through code optimization.</li>
+                    <li>• Implemented new features using React and Node.js.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Junior Web Developer</span>
+                    <span class="item-date">2018 - 2021</span>
+                </div>
+                <p><strong>Creative Agency LLC</strong></p>
+                <ul>
+                    <li>• Developed responsive websites for various clients.</li>
+                    <li>• Collaborated with designers to translate UI/UX mockups into code.</li>
+                    <li>• Maintained and updated existing client sites.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Bachelor of Science in Computer Science</span>
+                    <span class="item-date">2014 - 2018</span>
+                </div>
+                <p>University of Technology</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">HTML5 & CSS3</div>
+                <div class="skill-tag">JavaScript (ES6+)</div>
+                <div class="skill-tag">React.js</div>
+                <div class="skill-tag">Node.js</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">Git & GitHub</div>
+                <div class="skill-tag">SQL</div>
+                <div class="skill-tag">Figma</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>E-Commerce Dashboard</h3>
+                    <p>A dashboard to track sales and inventory using React and Firebase.</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: bold;">View Project &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <h3>Task Manager App</h3>
+                    <p>A productivity app built with Python and Tkinter.</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: bold;">View Project &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>Email: john.doe@example.com</p>
+            <p>Phone: (555) 123-4567</p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/johndoe</a></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2023 John Doe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling script for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
